@@ -42,6 +42,8 @@ public:
             std::cout << "Out of bounds error\n";
             return;
         }
+        //returns true if matrix[vOne][vTwo] is 1
+        return matrix[vOne][vTwo] == 1;
     }
 
     void print(){
