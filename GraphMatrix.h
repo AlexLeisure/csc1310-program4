@@ -12,7 +12,9 @@ private:
 public:
 
     GraphMatrix(int numVertex){
-
+        this->numVertex = numVertex;
+        matrix = new int[numVertex][numVertex];
+        numEdge = 0;
     }
     ~GraphMatrix(){
 
