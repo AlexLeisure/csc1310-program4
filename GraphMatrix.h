@@ -47,7 +47,14 @@ public:
     }
 
     void print(){
-
+        std::cout << "Matrix\n";
+        for(int i=0; i<numVertex; i++){
+            for(int x=0; x<numVertex; x++){
+                std::cout << matrix[i][x] << " ";
+            }
+            std::cout << "\n";
+        }
+        std::cout << "\n";
     }
 
 };
