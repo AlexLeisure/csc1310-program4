@@ -1,6 +1,8 @@
 #ifndef GRAPHMATRIX_H
 #define GRAPHMATRIX_H
 
+#include <iostream>
+
 class GraphMatrix{
 private:
     int** matrix;
@@ -23,13 +25,22 @@ public:
      */
     void addEdge(int vOne, int vTwo){
         //TODO: add edge
+        if(vOne >= numVertex || vTwo >= numVertex){
+            std::cout << "Out of bounds error\n";
+            return;
+        }
     }
     bool hasEdge(int vOne, int vTwo){
         //TODO: test if matrix[vOne][vTwo] is 1
+        if(vOne >= numVertex || vTwo >= numVertex){
+            std::cout << "Out of bounds error\n";
+            return;
+        }
+
     }
 
     void print(){
-        
+
     }
 
 };
