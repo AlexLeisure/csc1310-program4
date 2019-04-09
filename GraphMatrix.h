@@ -17,7 +17,10 @@ public:
         numEdge = 0;
     }
     ~GraphMatrix(){
-
+        for(int i=0; i<numVertex; i++){
+            delete [] matrix[i];
+        }
+        delete [] matrix;
     }
 
     /**
