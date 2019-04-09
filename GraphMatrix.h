@@ -11,7 +11,7 @@ private:
 
 public:
 
-    GraphMatrix(int numVertex){
+    GraphMatrix(const int numVertex){
         this->numVertex = numVertex;
         matrix = new int[numVertex][numVertex];
         numEdge = 0;
@@ -47,7 +47,7 @@ public:
         //TODO: test if matrix[vOne][vTwo] is 1
         if(vOne >= numVertex || vTwo >= numVertex){
             std::cout << "Out of bounds error\n";
-            return;
+            return false;
         }
         //returns true if matrix[vOne][vTwo] is 1
         return matrix[vOne][vTwo] == 1;
