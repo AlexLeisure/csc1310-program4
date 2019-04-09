@@ -11,5 +11,5 @@ graph.o	:			graph.cpp
 					g++  -I ./ -c graph.cpp
 
 clean			:	graph.exe
-					del *.o 
-					del graph.exe
+					rm *.o 
+					rm graph.exe
