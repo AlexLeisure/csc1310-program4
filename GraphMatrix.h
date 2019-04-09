@@ -34,6 +34,7 @@ public:
             std::cout << "Out of bounds error\n";
             return;
         }
+        matrix[vOne][vTwo] = 1;
     }
     bool hasEdge(int vOne, int vTwo){
         //TODO: test if matrix[vOne][vTwo] is 1
@@ -41,7 +42,6 @@ public:
             std::cout << "Out of bounds error\n";
             return;
         }
-
     }
 
     void print(){
