@@ -13,7 +13,9 @@ public:
 
     GraphMatrix(const int numVertex){
         this->numVertex = numVertex;
-        matrix = new int[numVertex][numVertex];
+        int** matrix = new int*[numVertex];
+        for(int i = 0; i < numVertex; i++)
+            matrix[i] = new int[numVertex];
         numEdge = 0;
         //set all values in matrix to 0
         for(int i=0; i<numVertex; i++){
