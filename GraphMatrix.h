@@ -13,16 +13,14 @@ public:
 
     GraphMatrix(const int numVertex){
         this->numVertex = numVertex;
-        int** matrix = new int*[numVertex];
-        for(int i = 0; i < numVertex; i++)
+        matrix = new int*[numVertex];
+        for(int i = 0; i < numVertex; i++){
             matrix[i] = new int[numVertex];
-        numEdge = 0;
-        //set all values in matrix to 0
-        for(int i=0; i<numVertex; i++){
-            for(int x=0; x<numVertex; x++){
+            for(int x=0; x < numVertex; x++){
                 matrix[i][x] = 0;
             }
         }
+        numEdge = 0;
     }
     ~GraphMatrix(){
         for(int i=0; i<numVertex; i++){
@@ -36,7 +34,7 @@ public:
      * @param vOne [Vertex that points. Value is an index for matrix.]
      * @param vTwo [Vertex that is pointed to. Value is an index for matrix.]
      */
-    void addEdge(int vOne, int vTwo){
+    void addEdge(const int vOne, const int vTwo){
         //TODO: add edge
         if(vOne >= numVertex || vTwo >= numVertex){
             std::cout << "Out of bounds error\n";
