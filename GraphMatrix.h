@@ -15,6 +15,12 @@ public:
         this->numVertex = numVertex;
         matrix = new int[numVertex][numVertex];
         numEdge = 0;
+        //set all values in matrix to 0
+        for(int i=0; i<numVertex; i++){
+            for(int x=0; x<numVertex; x++){
+                matrix[i][x] = 0;
+            }
+        }
     }
     ~GraphMatrix(){
         for(int i=0; i<numVertex; i++){
@@ -35,6 +41,7 @@ public:
             return;
         }
         matrix[vOne][vTwo] = 1;
+        numEdge++;
     }
     bool hasEdge(int vOne, int vTwo){
         //TODO: test if matrix[vOne][vTwo] is 1
