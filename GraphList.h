@@ -16,9 +16,11 @@ public:
         this->numVertex = numVertex;
         numEdge = 0;
         adjList = new Node*[numVertex];
-        for(int i=0; i<numVertex; i++)
-            adjList[i] = nullptr;
-
+        for(int i=0; i<numVertex; i++){
+            adjList[i] = new Node;
+            adjList[i]->value = i;
+            adjList[i]->next = nullptr;
+        }
     }
     ~GraphList(){
 
