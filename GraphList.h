@@ -3,7 +3,10 @@
 
 class GraphList{
 private:
-    
+    struct Node{
+        int value;
+        Node* next;
+    };
 
 public:
 
