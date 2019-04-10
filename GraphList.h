@@ -13,6 +13,11 @@ private:
 
 public:
     GraphList(int numVertex){
+        this->numVertex = numVertex;
+        numEdge = 0;
+        adjList = new Node*[numVertex];
+        for(int i=0; i<numVertex; i++)
+            adjList[i] = nullptr;
 
     }
     ~GraphList(){
