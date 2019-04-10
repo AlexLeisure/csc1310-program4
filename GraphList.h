@@ -7,6 +7,9 @@ private:
         int value;
         Node* next;
     };
+    Node** adjList;
+    int numVertex;
+    int numEdge;
 
 public:
 
