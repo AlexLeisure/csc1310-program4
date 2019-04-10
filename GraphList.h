@@ -12,7 +12,18 @@ private:
     int numEdge;
 
 public:
+    GraphList(int numVertex){
 
+    }
+    ~GraphList(){
+
+    }
+    void addEdge(int vOne, int vTwo){
+
+    }
+    void print(){
+
+    }
 };
 
 #endif
