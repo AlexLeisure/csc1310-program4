@@ -26,7 +26,16 @@ public:
         }
     }
     ~GraphList(){
-
+        Node* tempNode;
+        for(int i=0; i<numVertex; i++){
+            Node* node = adjList[i];
+            while(node){
+                tempNode = node->next;
+                delete node;
+                node = tempNode;
+            }
+        }
+        delete [] adjList;
     }
     void addEdge(int vOne, int vTwo){
         if(vOne >= numVertex || vTwo >= numVertex){
